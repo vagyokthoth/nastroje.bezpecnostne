@@ -1,9 +1,10 @@
 #!/bin/bash
+# TODO: this script should be consumer of file.sh
 set -e
 SCRIPT_DIR=$(dirname $(readlink -f $0))
 SCRIPT_CONFIG="file"
-source ${SCRIPT_DIR}/../config/color
-source ${SCRIPT_DIR}/config/${SCRIPT_CONFIG}
+source ${SCRIPT_DIR}/../../config/color
+source ${SCRIPT_DIR}/../../config/${SCRIPT_CONFIG}
 if [ "$1" == "" ]; then
   echo -ne "\n${THOTHSEC_COLOR}filename: "
   read INPUT_FILE
