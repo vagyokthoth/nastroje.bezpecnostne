@@ -18,7 +18,7 @@ else
 fi
 echo -ne "\nrandomizing ${INPUT_IFACE}...\n"
 ifconfig ${INPUT_IFACE} down
-macchanger -b --another ${INPUT_IFACE}
+macchanger -b -A ${INPUT_IFACE}
 ifconfig ${INPUT_IFACE} up
 ifconfig -s
 echo -ne "\e[0m\n";
